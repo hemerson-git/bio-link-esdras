@@ -1,0 +1,133 @@
+@font-face {
+  font-family: Glacial Indifferent;
+  src: url("../fonts/GlacialIndifference-Regular.otf") format("opentype");
+}
+
+@font-face {
+  font-family: Glacial Indifferent;
+  font-weight: bold;
+  src: url("../fonts/GlacialIndifference-Bold.otf") format("opentype");
+}
+
+:root {
+  --primary: #cb6ce6;
+  --light: #fff;
+  --background: #f9f5f0;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+}
+
+body,
+html,
+button {
+  font-family: Glacial Indifferent;
+}
+
+img {
+  user-select: none;
+  pointer-events: none;
+}
+
+main {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: var(--background);
+  padding: 48px 16px;
+}
+
+main > h2 {
+  color: var(--primary);
+  user-select: none;
+}
+
+.texture {
+  position: fixed;
+  top: -60px;
+  width: 80%;
+  opacity: 0.3;
+  user-select: none;
+  pointer-events: none;
+}
+
+.logo {
+  width: 200px;
+  margin-bottom: 40px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.links-container {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  gap: 16px;
+}
+
+.btn-primary {
+  position: relative;
+  max-width: 240px;
+  height: 65px;
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -moz-transition: opacity 0.3s ease-in-out;
+  -ms-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  text-underline-offset: 3px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.btn-primary:hover {
+  opacity: 0.7;
+}
+
+.btn-primary img {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.btn-primary span {
+  color: white;
+  position: relative;
+}
+
+@media (max-width: 767px) {
+  .texture {
+    position: fixed;
+    top: 0px;
+    width: auto;
+    height: 100vh;
+    opacity: 0.3;
+    user-select: none;
+    pointer-events: none;
+  }
+
+  .logo {
+    margin-bottom: 24px;
+  }
+}
